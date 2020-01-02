@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Http\Library\Common;
-
+use Illuminate\Http\Request;
 class CommonController extends Controller{
     
     protected $commonLibraryObj;
@@ -9,7 +9,7 @@ class CommonController extends Controller{
         $this->commonLibraryObj = new Common();
     }
     
-    public function getStateList(){
+    public function getStateList(Request $request){
         return $this->commonLibraryObj->stateList();
     }
 }
